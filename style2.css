@@ -1,0 +1,141 @@
+/*tipopgrafias*/
+/* Registramos la fuente en el sistema del navegador */
+@font-face {
+    font-family: 'Porsche911';
+    src: url('fonts/911porschav3bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Opcional: Registramos la versión inclinada (ital) para mayor realismo */
+@font-face {
+    font-family: 'Porsche911';
+    src: url('fonts/911porschav3boldital.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+.yesteryear-regular {
+  font-family: "Yesteryear", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* 1. Selector de etiqueta: Estilo para el cuerpo de la página */
+body {
+    background-color: #f0f2f5;
+    padding: 20px;
+}
+
+/* 2. Selector de etiqueta: Estilo para los títulos h1 */
+h1 {
+    text-align: center;
+    color: #333;
+    padding-bottom: 20px;
+     font-family: 'Porsche911', sans-serif;
+  
+}
+
+/* 3. Selector de ID: Contenedor principal para organizar el catálogo */
+#contenedor-catalogo {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* 4. Selector de Clase: Diseño de las tarjetas de producto reutilizables */
+.tarjeta-producto {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 200px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      
+     
+}
+
+/* 5. Selector de Clase: Color y énfasis para el precio */
+.precio {
+    color: #27ae60;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* 6. Selector Combinado 1: Afecta solo a los h3 dentro de las tarjetas */
+.tarjeta-producto h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+/* 7. Selector Combinado 2: Botones específicos dentro de la tarjeta de producto */
+.tarjeta-producto button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* 8. Selector Combinado (Pseudo-clase): Cambio de color al pasar el mouse por el botón */
+.tarjeta-producto button:hover {
+    background-color: #2980b9;
+    
+}
+
+
+
+/* 2. Corregimos la tarjeta para que sea un contenedor cerrado */
+.tarjeta-producto {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 100px;
+    width: 300px;         /* Un ancho más cómodo para el diseño */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;    /* ¡VITAL! Corta cualquier cosa que se salga de la tarjeta */
+}
+
+/* 3. El domador de imágenes (La clave de tu problema) */
+.imagen-auto {
+    width: 100%;          /* Se ajusta al ancho de la tarjeta */
+    height: 180px;        /* Le damos una altura fija */
+    object-fit: contain;  /* Ajusta el auto completo dentro del espacio sin cortarlo */
+    margin-bottom: 15px;
+    background-color: #fafafa; /* Un fondo gris sutil para resaltar el auto */
+}
+
+.cabecera-logo {
+    display: flex;             
+    justify-content: center;    
+    align-items: center;        
+    gap: 15px;                 
+    margin-top: 20px;   
+       
+}
+
+.escudo {
+    width: 60px;               
+    height: auto;
+    padding-bottom: 20px;
+}
+
+
+.cabecera-logo h1 {
+    margin: 0;
+    font-family: 'Porsche911', sans-serif;
+    letter-spacing: 5px;
+
+}
+
+h3{
+    font-family: "Yesteryear", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 25px;
+}
